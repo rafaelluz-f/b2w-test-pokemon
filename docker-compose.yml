@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: b2w_pokemon_dev
+    image: b2wpokemon_dev/app:1.0
+    build:
+      context: ./app
+      dockerfile: ./dockerfile
+    working_dir: /home/node/app
+    restart: always
+    env_file:
+      - ./.env
+    ports:
+      - ${APP_HOST}:${APP_CONTAINER}
+    volumes:
+      - ./app:/home/node/app
+    stdin_open: true
+    command: 'yarn start'
+
+volumes:
+  app:
