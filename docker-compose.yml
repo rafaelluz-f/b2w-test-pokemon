@@ -1,8 +1,8 @@
 version: "3.7"
 
 services:
-  app:
-    container_name: b2w_pokemon_dev
+  app0:
+    container_name: b2w_pokemon_dev_app0
     image: b2wpokemon_dev/app:1.0
     build:
       context: ./app
@@ -12,7 +12,7 @@ services:
     env_file:
       - ./.env
     environment:
-      - REACT_APP_DEBUG=ghost
+      - REACT_APP_POKEMON_THEME=ghost
     ports:
       - ${APP_HOST0}:${APP_CONTAINER}
     volumes:
@@ -20,8 +20,8 @@ services:
     stdin_open: true
     command: "yarn start"
 
-    app2:
-    container_name: b2w_pokemon_dev
+  app1:
+    container_name: b2w_pokemon_dev_app1
     image: b2wpokemon_dev/app:1.0
     build:
       context: ./app
@@ -31,7 +31,7 @@ services:
     env_file:
       - ./.env
     environment:
-      - REACT_APP_DEBUG=water
+      - REACT_APP_POKEMON_THEME=water
     ports:
       - ${APP_HOST1}:${APP_CONTAINER}
     volumes:
@@ -39,8 +39,8 @@ services:
     stdin_open: true
     command: "yarn start"
 
-    app3:
-    container_name: b2w_pokemon_dev
+  app2:
+    container_name: b2w_pokemon_dev_app2
     image: b2wpokemon_dev/app:1.0
     build:
       context: ./app
@@ -50,7 +50,7 @@ services:
     env_file:
       - ./.env
     environment:
-      - REACT_APP_DEBUG=fire
+      - REACT_APP_POKEMON_THEME=fire
     ports:
       - ${APP_HOST2}:${APP_CONTAINER}
     volumes:
@@ -59,4 +59,6 @@ services:
     command: "yarn start"
 
 volumes:
-  app:
+  app0:
+  app1:
+  app2:
