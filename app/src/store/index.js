@@ -1,28 +1,21 @@
-import { createStore } from 'redux';
+import { createStore } from "redux";
 
 const INITIAL_STATE = {
-  data: {
-    courses: ['ReactNative', 'ReactJs', 'Rafael'],
-    api: [],
-  },
+  theme: {},
+  pokemon: [],
 };
 function course(state = INITIAL_STATE, action) {
-  console.log('running');
-  console.log(state);
   switch (action.type) {
-    case 'ADD_COURSE':
+    case "SET_THEME":
       return {
         ...state,
-        data: { ...state.data, courses: [...state.data.courses, action.title] },
+        theme: action.payload,
       };
 
-    case 'ADD_API':
+    case "SET_POKEMON":
       return {
         ...state,
-        data: {
-          ...state.data,
-          api: action.payload,
-        },
+        pokemon: action.payload,
       };
 
     default:
@@ -30,6 +23,9 @@ function course(state = INITIAL_STATE, action) {
   }
 }
 
-const store = createStore(course);
+const store = createStore(
+  course,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 export default store;

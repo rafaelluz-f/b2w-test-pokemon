@@ -1,26 +1,20 @@
-import { useState, useEffect } from 'react';
-import pokeapi from '../api/pokeapi';
-import config from '../config';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import pokeapi from "../api/pokeapi";
 
 export default function usePokemon(pokemonTypeID) {
-  const [pokemon, setPokemon] = useState([]);
-  const [error, setError] = useState('');
+  const theme = useSelector((state) => state.theme);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const searchApi = async (pokemonTypeID) => {
       try {
-        const result = await pokeapi.get('/type/' + pokemonTypeID);
-        //console.log(result);
-        setPokemon(result.data.pokemon);
-      } catch (error) {
-        // console.log(error);
-        setError('Something went wrong');
-      }
+        const result = await pokeapi.get("/type/" + theme.pokemonTypeID);
+        dispatch({ type: "SET_POKEMON", payload: result.data.pokemon });
+        console.log(result);
+      } catch (error) {}
     };
 
-    const appConfig = config(process.env.REACT_APP_POKEMON_TYPE);
-    searchApi(appConfig.pokemonTypeID);
+    searchApi(pokemonTypeID);
   }, []);
-
-  return [pokemon, error];
 }

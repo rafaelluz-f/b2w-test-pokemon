@@ -1,10 +1,10 @@
-import * as themes from './themes';
+import * as themes from "./themes";
 
 const config = (type) => {
-  if ('fire' === type) {
+  if ("fire" === type) {
     return themes.fire;
   }
-  if ('water' === type) {
+  if ("water" === type) {
     return themes.water;
   }
   return themes.ghost;
