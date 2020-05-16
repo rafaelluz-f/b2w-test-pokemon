@@ -1,16 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const ProductPrice = styled.div`
-  padding: 0 0 20px;
-
+const ProductName = styled.div`
   span {
     display: block;
     text-align: center;
     font-size: 24px;
   }
 
-  .strongPrice {
+  .strongName {
     font-size: 26px;
     font-weight: 900;
     text-transform: uppercase;
@@ -19,9 +17,9 @@ const ProductPrice = styled.div`
 
 export default (props) => {
   return (
-    <ProductPrice className="productPrice">
-      <span className="strongPrice">Preço</span>
-      <span>R$89,90</span>
-    </ProductPrice>
+    <ProductName className="productName">
+      <span className="strongName">Nome</span>
+      <span>{props.name}</span>
+    </ProductName>
   );
 };
