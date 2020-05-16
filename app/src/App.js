@@ -20,11 +20,27 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     height: 100%;
     max-width: 100%;
-    background: #048ca4;
-    background: -moz-linear-gradient(top, #048ca4 1%, #1959e2 100%);
-    background: -webkit-linear-gradient(top, #048ca4 1%, #1959e2 100%);
-    background: linear-gradient(to bottom, #048ca4 1%, #1959e2 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#048ca4', endColorstr='#1959e2',GradientType=0 );
+    background: ${(props) =>
+      props.degradeColor1 ? props.degradeColor1 : `black`};
+    background: -moz-linear-gradient(top,  ${(props) =>
+      props.degradeColor1 ? props.degradeColor1 : `black`} 0%, ${(props) =>
+  props.degradeColor2 ? props.degradeColor2 : `black`} 48%, ${(props) =>
+  props.degradeColor1 ? props.degradeColor1 : `black`} 100%);
+    background: -webkit-linear-gradient(top,  ${(props) =>
+      props.degradeColor1 ? props.degradeColor1 : `black`} 0%,${(props) =>
+  props.degradeColor2 ? props.degradeColor2 : `black`} 48%,${(props) =>
+  props.degradeColor1 ? props.degradeColor1 : `black`} 100%);
+    background: linear-gradient(to bottom,  ${(props) =>
+      props.degradeColor1 ? props.degradeColor1 : `black`} 0%,${(props) =>
+  props.degradeColor2 ? props.degradeColor2 : `black`} 48%,${(props) =>
+  props.degradeColor1 ? props.degradeColor1 : `black`} 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='${(
+      props
+    ) =>
+      props.degradeColor1 ? props.degradeColor1 : `black`}', endColorstr='${(
+  props
+) => (props.degradeColor1 ? props.degradeColor1 : `black`)}',GradientType=0 );
+
     background-position: center;
     background-size:contain;
     display: flex;
@@ -41,7 +57,10 @@ function App() {
 
   return (
     <Router>
-      <GlobalStyle />
+      <GlobalStyle
+        degradeColor1={theme.degradeColor1}
+        degradeColor2={theme.degradeColor2}
+      />
       <Switch>
         <Route path="/">
           <Home />

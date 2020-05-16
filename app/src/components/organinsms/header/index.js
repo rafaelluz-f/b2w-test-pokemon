@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import AppLogo from "../../molecules/appLogo";
 import logo from "../../../assets/images/logo-water.png";
 
 const Header = styled.header`
@@ -18,9 +19,7 @@ const Header = styled.header`
 export default (props) => {
   return (
     <Header className="header">
-      <span>
-        <img src={logo} />
-      </span>
+      <AppLogo />
     </Header>
   );
 };

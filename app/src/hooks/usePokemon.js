@@ -11,7 +11,6 @@ export default function usePokemon(pokemonTypeID) {
       try {
         const result = await pokeapi.get("/type/" + theme.pokemonTypeID);
         dispatch({ type: "SET_POKEMON", payload: result.data.pokemon });
-        console.log(result);
       } catch (error) {}
     };
 

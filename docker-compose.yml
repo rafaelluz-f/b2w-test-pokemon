@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3.7"
 
 services:
   app:
@@ -11,12 +11,52 @@ services:
     restart: always
     env_file:
       - ./.env
+    environment:
+      - REACT_APP_DEBUG=ghost
     ports:
-      - ${APP_HOST}:${APP_CONTAINER}
+      - ${APP_HOST0}:${APP_CONTAINER}
     volumes:
       - ./app:/home/node/app
     stdin_open: true
-    command: 'yarn start'
+    command: "yarn start"
+
+    app2:
+    container_name: b2w_pokemon_dev
+    image: b2wpokemon_dev/app:1.0
+    build:
+      context: ./app
+      dockerfile: ./dockerfile
+    working_dir: /home/node/app
+    restart: always
+    env_file:
+      - ./.env
+    environment:
+      - REACT_APP_DEBUG=water
+    ports:
+      - ${APP_HOST1}:${APP_CONTAINER}
+    volumes:
+      - ./app:/home/node/app
+    stdin_open: true
+    command: "yarn start"
+
+    app3:
+    container_name: b2w_pokemon_dev
+    image: b2wpokemon_dev/app:1.0
+    build:
+      context: ./app
+      dockerfile: ./dockerfile
+    working_dir: /home/node/app
+    restart: always
+    env_file:
+      - ./.env
+    environment:
+      - REACT_APP_DEBUG=fire
+    ports:
+      - ${APP_HOST2}:${APP_CONTAINER}
+    volumes:
+      - ./app:/home/node/app
+    stdin_open: true
+    command: "yarn start"
 
 volumes:
   app:

@@ -3,26 +3,26 @@ import styled from "styled-components";
 import ProductCard from "../productCard";
 import imageSample from "../../../assets/images/productImageSample.png";
 
-const ListCardProduct = styled.div`
+const ProductCardList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10px;
+  width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     width: 70%;
   }
 `;
 
 export default (props) => {
   return (
-    <ListCardProduct className="listCardProduct">
+    <ProductCardList className="productCardList">
       <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
       <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
       <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
       <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
       <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
       <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
-    </ListCardProduct>
+    </ProductCardList>
   );
 };

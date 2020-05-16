@@ -6,26 +6,11 @@ import ProductPrice from "../../molecules/productPrice";
 import ProductButton from "../../molecules/productButton";
 import Divider from "../../atoms/divider";
 
-export default (props) => {
-  const { name, image, price } = props;
-  console.log(image);
-  return (
-    <CardProduct className="cardProduct">
-      <ProductImage image={image} />
-      <ProductName name={name} />
-      <Divider />
-      <ProductPrice price={price} />
-      <ProductButton />
-    </CardProduct>
-  );
-};
-
 const CardProduct = styled.div`
   width: 100%;
   flex-basis: 100%;
   margin: 20px 5px;
   border-radius: 10px;
-  border: 1px solid #bebebe;
   background: #ffffff;
   background: -moz-linear-gradient(top, #ffffff 1%, #999999 100%);
   background: -webkit-linear-gradient(top, #ffffff 1%, #999999 100%);
@@ -38,3 +23,16 @@ const CardProduct = styled.div`
     flex-basis: 30%;
   }
 `;
+
+export default (props) => {
+  const { name, image, price } = props;
+  return (
+    <CardProduct className="cardProduct">
+      <ProductImage image={image} />
+      <ProductName name={name} />
+      <Divider />
+      <ProductPrice price={price} />
+      <ProductButton />
+    </CardProduct>
+  );
+};
