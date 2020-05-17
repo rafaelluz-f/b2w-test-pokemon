@@ -28,6 +28,7 @@ export default (props) => {
         <>
           {pokemonByType.map((item, i) => (
             <ProductCard
+              key={i}
               name={item.pokemon.name}
               price={generateRandomPrice()}
             />
