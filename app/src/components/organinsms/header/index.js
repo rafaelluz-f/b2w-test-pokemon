@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import AppLogo from "../../molecules/appLogo";
-import logo from "../../../assets/images/logo-water.png";
 
 const Header = styled.header`
   text-align: center;

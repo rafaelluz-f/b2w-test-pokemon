@@ -21,7 +21,7 @@ export default (props) => {
   return (
     <ProductPrice className="productPrice">
       <span className="strongPrice">Preço</span>
-      <span>R$89,90</span>
+      <span>{props.price}</span>
     </ProductPrice>
   );
 };

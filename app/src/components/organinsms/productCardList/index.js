@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductCard from "../productCard";
 import imageSample from "../../../assets/images/productImageSample.png";
+import { useDispatch, useSelector } from "react-redux";
+import { generateRandomPrice } from "../../../helper/generateRandomPrice";
 
 const ProductCardList = styled.div`
   display: flex;
@@ -15,14 +17,23 @@ const ProductCardList = styled.div`
 `;
 
 export default (props) => {
+  const pokemonByType = useSelector((state) => state.pokemonByType);
+  const pokemonLoading = useSelector((state) => state.pokemonLoading);
+  const dispatch = useDispatch();
+
   return (
     <ProductCardList className="productCardList">
-      <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
-      <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
-      <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
-      <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
-      <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
-      <ProductCard name="Rafael" price="R$89,90" image={imageSample} />
+      {pokemonLoading && <p>1 carregando...</p>}
+      {!pokemonLoading && (
+        <>
+          {pokemonByType.map((item, i) => (
+            <ProductCard
+              name={item.pokemon.name}
+              price={generateRandomPrice()}
+            />
+          ))}
+        </>
+      )}
     </ProductCardList>
   );
 };

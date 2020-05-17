@@ -16,14 +16,15 @@ const AppLogo = styled.span`
 `;
 
 export default (props) => {
-  const config = useSelector((state) => state.theme);
-  const graphImage = require("../../../assets/images/logo-" +
-    config.themeName +
+  const themeName = useSelector((state) => state.theme.themeName);
+
+  const logoByTheme = require("../../../assets/images/logo-" +
+    themeName +
     ".png");
 
   return (
     <AppLogo className="appLogo">
-      <img src={graphImage} />
+      <img src={logoByTheme} />
     </AppLogo>
   );
 };

@@ -2,7 +2,8 @@ import { createStore } from "redux";
 
 const INITIAL_STATE = {
   theme: {},
-  pokemon: [],
+  pokemonLoading: "true",
+  pokemonByType: [],
 };
 function course(state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -12,10 +13,15 @@ function course(state = INITIAL_STATE, action) {
         theme: action.payload,
       };
 
-    case "SET_POKEMON":
+    case "SET_POKEMON_DATA_BY_TYPE":
       return {
         ...state,
-        pokemon: action.payload,
+        pokemonByType: action.payload,
+      };
+    case "SET_POKEMON_LOADING":
+      return {
+        ...state,
+        pokemonLoading: action.payload,
       };
 
     default:

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { createGlobalStyle } from "styled-components";
 import Home from "./components/pages/home";
 import useTheme from "./hooks/useTheme";
-import usePokemon from "./hooks/usePokemon";
+import usePokemonByType from "./hooks/usePokemonByType";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -53,7 +53,7 @@ function App() {
   const theme = useSelector((state) => state.theme);
 
   useTheme(process.env.REACT_APP_POKEMON_THEME);
-  usePokemon();
+  usePokemonByType();
 
   return (
     <Router>

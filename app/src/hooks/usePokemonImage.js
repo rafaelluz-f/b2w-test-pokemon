@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import pokeapi from "../api/pokeapi";
 
 export default function usePokemon(pokemonTypeID) {
   const theme = useSelector((state) => state.theme);
