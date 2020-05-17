@@ -6,6 +6,7 @@ const ProductName = styled.div`
     display: block;
     text-align: center;
     font-size: 24px;
+    text-transform: capitalize;
   }
 
   .strongName {
