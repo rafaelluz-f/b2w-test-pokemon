@@ -9,7 +9,7 @@ import Divider from "../../atoms/divider";
 const CardProduct = styled.div`
   width: 100%;
   flex-basis: 100%;
-  margin: 20px 5px;
+  margin: 30px 5px;
   border-radius: 10px;
   background: #ffffff;
   background: -moz-linear-gradient(top, #ffffff 1%, #999999 100%);
