@@ -21,6 +21,12 @@ export default (props) => {
   const pokemonLoading = useSelector((state) => state.pokemonLoading);
   const dispatch = useDispatch();
 
+  const getIdPokemonThroughUrl = (url) => {
+    const split = url.split("/");
+    const pokemonID = split[6];
+
+    return pokemonID;
+  };
   return (
     <ProductCardList className="productCardList">
       {pokemonLoading && <p>1 carregando...</p>}
@@ -29,6 +35,7 @@ export default (props) => {
           {pokemonByType.map((item, i) => (
             <ProductCard
               key={i}
+              imageID={getIdPokemonThroughUrl(item.pokemon.url)}
               name={item.pokemon.name}
               price={generateRandomPrice()}
             />

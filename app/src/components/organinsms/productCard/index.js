@@ -25,10 +25,10 @@ const CardProduct = styled.div`
 `;
 
 export default (props) => {
-  const { name, image, price } = props;
+  const { name, imageID, price } = props;
   return (
     <CardProduct className="cardProduct">
-      <ProductImage image={image} />
+      <ProductImage imageID={imageID} />
       <ProductName name={name} />
       <Divider />
       <ProductPrice price={price} />
