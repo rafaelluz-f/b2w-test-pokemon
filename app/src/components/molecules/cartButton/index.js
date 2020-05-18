@@ -2,18 +2,35 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 const CartButton = styled.div`
-  background: #a22525;
-  color: #fff;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 32px;
-  padding: 25px 20px;
-  cursor: pointer;
+  button {
+    background: green;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 32px;
+    padding: 25px 20px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+  }
+  .disabled {
+    background: #a22525;
+    cursor: default;
+  }
 `;
 
 export default (props) => {
   const dispatch = useDispatch();
-  const [isModalCheckout, setIsModalCheckout] = useState();
+  const numberCard = useSelector((state) => state.numberCard);
+  const [disabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    if (numberCard) {
+      console.log(numberCard);
+      console.log(disabled);
+      setDisabled();
+    }
+  }, [numberCard]);
 
   const checkout = () => {
     dispatch({
@@ -32,7 +49,15 @@ export default (props) => {
   return (
     <>
       <CartButton className="cartButton">
-        <span onClick={() => checkout()}>FINALIZAR</span>
+        {disabled && (
+          <button
+            className="disabled"
+            onClick={() => alert("Adicione um cartão para comprar")}
+          >
+            FINALIZAR
+          </button>
+        )}
+        {!disabled && <button onClick={() => checkout()}>FINALIZAR</button>}
       </CartButton>
     </>
   );
