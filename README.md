@@ -8,7 +8,7 @@ Learn More:
 
 - [Getting Started](#getting-started)
 - [How to use](#how-to-use)
-- [Technology](#echnology)
+- [Technology](#technology)
 - [How to run with docker](#how-to-run-with-docker)
 - [How to run with yarn/npm](#how-to-run-with-yarn-npm)
 - [How to run tests](#how-to-run-tests)
