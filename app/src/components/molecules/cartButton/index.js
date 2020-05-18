@@ -49,8 +49,6 @@ export default (props) => {
     });
   };
 
-  console.log(cartProducts.length);
-
   return (
     <>
       <CartButton className="cartButton">
