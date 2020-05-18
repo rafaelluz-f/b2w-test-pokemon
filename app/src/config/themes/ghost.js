@@ -4,6 +4,7 @@ export const defaultTheme = {
   background: "#fff",
   degradeColor1: "#37046f",
   degradeColor2: "#4e04a3",
+  cartIsEmpty: "Nenhum pokemon do tipo fantasma foi adicionado",
   cartNeedsProducts:
     "O carrinho de compra está vazio. Adicione algum pokemon do tipo FANTASMA.",
   cartNeedsCardNumber:

@@ -1,19 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import CartItem from "../cartItem";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const CartItemList = styled.div`
   padding: 20px 0;
+
+  p {
+    padding: 0 20px;
+  }
 `;
 
 export default (props) => {
   const cartProducts = useSelector((state) => state.cartProducts);
   const cartIsEmpty = useSelector((state) => state.cartIsEmpty);
+  const theme = useSelector((state) => state.theme);
 
   return (
     <CartItemList className="CartItemList">
-      {cartIsEmpty && "nenhum produto adicionado"}
+      {cartIsEmpty && <p>{theme.cartIsEmpty}</p>}
       {!cartIsEmpty && (
         <>
           {cartProducts.map((item, i) => (
