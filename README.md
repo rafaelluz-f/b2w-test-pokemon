@@ -10,7 +10,7 @@ Learn More:
 - [How to use](#how-to-use)
 - [Technology](#technology)
 - [How to run with docker](#how-to-run-with-docker)
-- [How to run with yarn/npm](#how-to-run-with-yarn-npm)
+- [How to run with yarn or npm](#how-to-run-with-yarn-or-npm)
 - [How to run tests](#how-to-run-tests)
 - [Author](#author)
 - [License](#license)
@@ -66,7 +66,7 @@ After docker create containers you can access the app at:
 - http://localhost:3001 (water)
 - http://localhost:3002 (fire)
 
-# How to run with yarn/npm
+# How to run with yarn or npm
 
 If you want to change theme you can change .env REACT_APP_POKEMON_THEME=ghost||water||fire
 
