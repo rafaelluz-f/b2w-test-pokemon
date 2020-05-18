@@ -59,9 +59,12 @@ const GlobalStyle = createGlobalStyle`
     background-position: center;
     background-repeat: repeat-x;
     background-attachment: fixed;
+    flex:1;
+  }
+
+  #root > div {
     max-width:1200px;
     margin:0 auto;
-    flex:1;
   }
 `;
 
