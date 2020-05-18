@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import loader from "../../../assets/images/loader.gif";
-import pokemonImageNotFound from "../../../assets/images/pokemonImageNotFound.png";
 import usePokemonImage from "../../../hooks/usePokemonImage";
 
 const ProductImage = styled.div`
@@ -13,7 +12,7 @@ const ProductImage = styled.div`
 `;
 
 export default (props) => {
-  const [imageIsLoaded, image, imageURL] = usePokemonImage(props.imageID);
+  const [imageIsLoaded, image] = usePokemonImage(props.imageID);
 
   return (
     <ProductImage className="productImage">
