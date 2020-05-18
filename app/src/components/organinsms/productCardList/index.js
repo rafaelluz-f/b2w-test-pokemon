@@ -35,7 +35,7 @@ export default (props) => {
 
   return (
     <ProductCardList className="productCardList">
-      {pokemonLoading && <p>carregando...</p>}
+      {pokemonLoading && null}
       {errorApp && <p>{errorAppMessage}</p>}
       {!pokemonLoading && (
         <>
