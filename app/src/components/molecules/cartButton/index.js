@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
+
 const CartButton = styled.div`
   button {
     background: green;
@@ -23,6 +24,7 @@ export default (props) => {
   const dispatch = useDispatch();
   const numberCard = useSelector((state) => state.numberCard);
   const cartProducts = useSelector((state) => state.cartProducts);
+  const theme = useSelector((state) => state.theme);
   const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
@@ -46,7 +48,6 @@ export default (props) => {
       payload: true,
     });
   };
-  console.log(cartProducts);
 
   return (
     <>
@@ -54,7 +55,7 @@ export default (props) => {
         {cartProducts.length === 0 && (
           <button
             className="disabled"
-            onClick={() => alert("O carrinho está vazio")}
+            onClick={() => alert(theme.cartNeedsProducts)}
           >
             FINALIZAR
           </button>
@@ -62,7 +63,7 @@ export default (props) => {
         {disabled && cartProducts.length !== 0 && (
           <button
             className="disabled"
-            onClick={() => alert("Adicione um cartão para comprar")}
+            onClick={() => alert(theme.cartNeedsCardNumber)}
           >
             FINALIZAR
           </button>
