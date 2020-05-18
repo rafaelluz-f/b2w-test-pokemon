@@ -7,7 +7,8 @@ const INITIAL_STATE = {
   pokemonLoading: "true",
   pokemonByType: [],
   pokemonFilteredBySearch: [],
-  cartProducts: [{ name: "gastly", price: "R$66,98", imageID: "92" }],
+  cartIsEmpty: true,
+  cartProducts: [],
 };
 function course(state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -41,6 +42,11 @@ function course(state = INITIAL_STATE, action) {
       return {
         ...state,
         errorAppMessage: action.payload,
+      };
+    case "SET_CART_IS_EMPTY":
+      return {
+        ...state,
+        cartIsEmpty: false,
       };
     case "ADD_CART_PRODUCT":
       return {

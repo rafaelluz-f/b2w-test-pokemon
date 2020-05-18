@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductCard from "../productCard";
 import { useDispatch, useSelector } from "react-redux";
-import { generateRandomPrice } from "../../../helper/generateRandomPrice";
 
 const ProductCardList = styled.div`
   display: flex;
@@ -27,14 +26,13 @@ export default (props) => {
   const pokemonLoading = useSelector((state) => state.pokemonLoading);
   const errorAppMessage = useSelector((state) => state.errorAppMessage);
   const errorApp = useSelector((state) => state.errorApp);
-  const dispatch = useDispatch();
 
   const getIdPokemonThroughUrl = (url) => {
     const split = url.split("/");
     const pokemonID = split[6];
-
     return pokemonID;
   };
+
   return (
     <ProductCardList className="productCardList">
       {pokemonLoading && <p>carregando...</p>}
@@ -46,7 +44,6 @@ export default (props) => {
               key={i}
               imageID={getIdPokemonThroughUrl(item.pokemon.url)}
               name={item.pokemon.name}
-              price={generateRandomPrice()}
             />
           ))}
         </>

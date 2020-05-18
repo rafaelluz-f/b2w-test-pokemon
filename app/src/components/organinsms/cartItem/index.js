@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Divider from "../../atoms/divider";
+import usePokemonImage from "../../../hooks/usePokemonImage";
 
 const CartItem = styled.div`
   display: flex;
@@ -8,6 +9,7 @@ const CartItem = styled.div`
   flex-flow: row wrap;
   img {
     border: 1px solid #000;
+    max-width: 50px;
   }
   span {
     display: block;
@@ -53,16 +55,18 @@ const Column = styled.div`
 `;
 
 export default (props) => {
+  const [imageIsLoaded, image, imageURL] = usePokemonImage(props.id);
+
   return (
     <CartItem className="cartItem row">
       <Column className="column">
         <span className="image">
-          <img src="teste" />
+          <img src={image} />
         </span>
       </Column>
       <Column className="column">
-        <span>Charmander</span>
-        <span>R$89,90</span>
+        <span>{props.title}</span>
+        <span>{props.price}</span>
       </Column>
       <Divider />
     </CartItem>

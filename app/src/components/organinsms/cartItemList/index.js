@@ -10,24 +10,30 @@ const CartItemList = styled.div`
 export default (props) => {
   const dispatch = useDispatch();
   const cartProducts = useSelector((state) => state.cartProducts);
-
-  console.log(cartProducts);
+  const cartIsEmpty = useSelector((state) => state.cartIsEmpty);
 
   // dispatch({
   //   type: "ADD_CART_PRODUCT",
   //   payload: { name, price, imageID },
   // });
 
+  console.log(cartIsEmpty);
+
   return (
     <CartItemList className="CartItemList">
-      {!cartProducts === [] && "nenhum produto adicionado"}
-      <CartItem
-        title={cartProducts[0].name}
-        price={cartProducts[0].price}
-        id={cartProducts[0].id}
-      />
-      <CartItem />
-      <CartItem />
+      {cartIsEmpty && "nenhum produto adicionado"}
+      {!cartIsEmpty && (
+        <>
+          {cartProducts.map((item, i) => (
+            <CartItem
+              key={i}
+              title={item.name}
+              price={item.price}
+              id={item.id}
+            />
+          ))}
+        </>
+      )}
     </CartItemList>
   );
 };

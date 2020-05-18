@@ -42,6 +42,10 @@ export default (props) => {
       type: "ADD_CART_PRODUCT",
       payload: { name, price, imageID },
     });
+    dispatch({
+      type: "SET_CART_IS_EMPTY",
+      payload: false,
+    });
   };
   return (
     <ProductButton

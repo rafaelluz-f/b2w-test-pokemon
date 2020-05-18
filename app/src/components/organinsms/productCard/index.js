@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductName from "../../molecules/productName";
 import ProductImage from "../../molecules/productImage";
 import ProductPrice from "../../molecules/productPrice";
 import ProductButton from "../../molecules/productButton";
 import Divider from "../../atoms/divider";
+import { generateRandomPrice } from "../../../helper/generateRandomPrice";
 
 const CardProduct = styled.div`
   width: 100%;
@@ -25,7 +26,12 @@ const CardProduct = styled.div`
 `;
 
 export default (props) => {
-  const { name, imageID, price } = props;
+  const { name, imageID } = props;
+  const [price, setPrice] = useState();
+
+  useEffect(() => {
+    setPrice(generateRandomPrice());
+  }, []);
   return (
     <CardProduct className="cardProduct">
       <ProductImage imageID={imageID} />
