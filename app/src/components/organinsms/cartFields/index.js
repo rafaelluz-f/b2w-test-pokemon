@@ -59,7 +59,7 @@ export default (props) => {
   return (
     <CartFields className="cartFields">
       <p>
-        <label>Adicione o numero do seu Cartão:</label>
+        <label>Adicione o número do seu Cartão:</label>
         <input onChange={handleNumberCard} type="text" value={card} />
       </p>
       <p>
