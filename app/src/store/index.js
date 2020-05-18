@@ -6,6 +6,7 @@ const INITIAL_STATE = {
   errorAppMessage: "",
   pokemonLoading: "true",
   pokemonByType: [],
+  pokemonFilteredBySearch: [],
 };
 function course(state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -19,6 +20,11 @@ function course(state = INITIAL_STATE, action) {
       return {
         ...state,
         pokemonByType: action.payload,
+      };
+    case "SET_POKEMON_FILTERED_BY_SEARCH":
+      return {
+        ...state,
+        pokemonFilteredBySearch: action.payload,
       };
     case "SET_POKEMON_LOADING":
       return {

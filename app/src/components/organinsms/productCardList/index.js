@@ -22,7 +22,9 @@ const ProductCardList = styled.div`
 `;
 
 export default (props) => {
-  const pokemonByType = useSelector((state) => state.pokemonByType);
+  const pokemonFilteredBySearch = useSelector(
+    (state) => state.pokemonFilteredBySearch
+  );
   const pokemonLoading = useSelector((state) => state.pokemonLoading);
   const errorAppMessage = useSelector((state) => state.errorAppMessage);
   const errorApp = useSelector((state) => state.errorApp);
@@ -40,7 +42,7 @@ export default (props) => {
       {errorApp && <p>{errorAppMessage}</p>}
       {!pokemonLoading && (
         <>
-          {pokemonByType.map((item, i) => (
+          {pokemonFilteredBySearch.map((item, i) => (
             <ProductCard
               key={i}
               imageID={getIdPokemonThroughUrl(item.pokemon.url)}
