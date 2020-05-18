@@ -10,6 +10,8 @@ const INITIAL_STATE = {
   cartIsEmpty: true,
   cartProducts: [],
   isModalOpened: false,
+  numberCard: "",
+  rememberNumberCard: false,
 };
 function course(state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -63,6 +65,16 @@ function course(state = INITIAL_STATE, action) {
       return {
         ...state,
         isModalOpened: action.payload,
+      };
+    case "SET_NUMBER_CARD":
+      return {
+        ...state,
+        numberCard: action.payload,
+      };
+    case "SET_REMEMBER_NUMBER_CARD":
+      return {
+        ...state,
+        rememberNumberCard: action.payload,
       };
 
     default:

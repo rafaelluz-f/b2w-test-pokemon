@@ -22,7 +22,6 @@ export default (props) => {
   const cartProducts = useSelector((state) => state.cartProducts);
 
   const totalPrice = () => {
-    console.log(cartProducts);
     let result = 0;
     cartProducts.map((item) => {
       let itemPrice = item.price.replace(/[^0-9\,]/g, "");

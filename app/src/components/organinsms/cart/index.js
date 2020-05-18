@@ -4,6 +4,7 @@ import CartTitle from "../../molecules/cartTitle";
 import CartButton from "../../molecules/cartButton";
 import CartTotal from "../../molecules/cartTotal";
 import CartItemList from "../../organinsms/cartItemList";
+import CartFields from "../../organinsms/cartFields";
 
 const Cart = styled.div`
   background: #fff;
@@ -22,6 +23,7 @@ export default (props) => {
     <Cart className="cart">
       <CartTitle />
       <CartItemList />
+      <CartFields />
       <CartTotal />
       <CartButton />
     </Cart>
