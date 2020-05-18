@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import pokemonImageNotFound from "../assets/images/pokemonImageNotFound.png";
 
 export default function usePokemonByType(imageID) {
-  const theme = useSelector((state) => state.theme);
-  const dispatch = useDispatch();
-
   const [imageIsLoaded, setImageIsLoaded] = useState(false);
   const [image, setImage] = useState(null);
   const imageURL = `https://pokeres.bastionbot.org/images/pokemon/${imageID}.png`;

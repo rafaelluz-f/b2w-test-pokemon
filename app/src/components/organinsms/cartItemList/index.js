@@ -17,8 +17,6 @@ export default (props) => {
   //   payload: { name, price, imageID },
   // });
 
-  console.log(cartIsEmpty);
-
   return (
     <CartItemList className="CartItemList">
       {cartIsEmpty && "nenhum produto adicionado"}
@@ -29,7 +27,7 @@ export default (props) => {
               key={i}
               title={item.name}
               price={item.price}
-              id={item.id}
+              id={item.imageID}
             />
           ))}
         </>

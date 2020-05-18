@@ -58,6 +58,7 @@ const Column = styled.div`
 `;
 
 export default (props) => {
+  console.log(props);
   const [imageIsLoaded, image, imageURL] = usePokemonImage(props.id);
 
   return (
