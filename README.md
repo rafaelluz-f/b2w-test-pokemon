@@ -37,7 +37,7 @@ You can see this app at {url} or follow the [How to run with docker](#how-to-run
 - [React](https://reactjs.org/)
 - [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
 - [Redux](https://redux.js.org/)
-- [SASS](https://sass-lang.com/)
+- [Styled Components](https://www.styled-components.com/)
 - [ESLint](https://eslint.org/)
 - [Babel](https://babeljs.io/)
 - [Webpack](https://webpack.js.org/)
