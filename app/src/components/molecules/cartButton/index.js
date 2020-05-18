@@ -49,6 +49,8 @@ export default (props) => {
     });
   };
 
+  console.log(cartProducts.length);
+
   return (
     <>
       <CartButton className="cartButton">
@@ -68,7 +70,9 @@ export default (props) => {
             FINALIZAR
           </button>
         )}
-        {!disabled && <button onClick={() => checkout()}>FINALIZAR</button>}
+        {!disabled && cartProducts.length !== 0 && (
+          <button onClick={() => checkout()}>FINALIZAR</button>
+        )}
       </CartButton>
     </>
   );
