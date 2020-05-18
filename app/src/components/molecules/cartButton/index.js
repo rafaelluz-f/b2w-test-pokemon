@@ -26,10 +26,10 @@ export default (props) => {
 
   useEffect(() => {
     if (numberCard) {
-      console.log(numberCard);
-      console.log(disabled);
       setDisabled();
+      return;
     }
+    setDisabled(true);
   }, [numberCard]);
 
   const checkout = () => {
