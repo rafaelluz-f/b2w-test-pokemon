@@ -7,7 +7,7 @@ const INITIAL_STATE = {
   pokemonLoading: "true",
   pokemonByType: [],
   pokemonFilteredBySearch: [],
-  cartProducts: [],
+  cartProducts: [{ name: "gastly", price: "R$66,98", imageID: "92" }],
 };
 function course(state = INITIAL_STATE, action) {
   switch (action.type) {

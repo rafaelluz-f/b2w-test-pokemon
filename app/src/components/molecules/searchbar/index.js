@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import imageSample from "../../../assets/images/productImageSample.png";
 import { useSelector, useDispatch } from "react-redux";
 
 const SearchBar = styled.div`

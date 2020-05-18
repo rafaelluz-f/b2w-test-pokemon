@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import imageSample from "../../../assets/images/productImageSample.png";
 import Divider from "../../atoms/divider";
 
 const CartItem = styled.div`
@@ -58,7 +57,7 @@ export default (props) => {
     <CartItem className="cartItem row">
       <Column className="column">
         <span className="image">
-          <img src={imageSample} />
+          <img src="teste" />
         </span>
       </Column>
       <Column className="column">

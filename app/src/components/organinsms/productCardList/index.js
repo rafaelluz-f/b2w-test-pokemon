@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductCard from "../productCard";
-import imageSample from "../../../assets/images/productImageSample.png";
 import { useDispatch, useSelector } from "react-redux";
 import { generateRandomPrice } from "../../../helper/generateRandomPrice";
 
