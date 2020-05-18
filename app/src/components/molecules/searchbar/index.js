@@ -52,7 +52,11 @@ export default (props) => {
 
   return (
     <SearchBar className="searchBar">
-      <input onChange={handleChange} type="text" placeholder="Search" />
+      <input
+        onChange={handleChange}
+        type="text"
+        placeholder="Procurar Pokemon..."
+      />
     </SearchBar>
   );
 };
