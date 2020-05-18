@@ -17,9 +17,7 @@ const SearchBar = styled.div`
 export default (props) => {
   const dispatch = useDispatch();
   const pokemonByType = useSelector((state) => state.pokemonByType);
-  const pokemonLoading = useSelector((state) => state.pokemonLoading);
   const [filterPokemon, setfilterPokemon] = useState("");
-  const [filteredPokemon, setFilteredPokemon] = useState([]);
 
   const handleChange = (event) => {
     setfilterPokemon(event.target.value);
@@ -34,7 +32,7 @@ export default (props) => {
       type: "SET_POKEMON_FILTERED_BY_SEARCH",
       payload: pokemonByType,
     });
-  }, [pokemonByType]);
+  }, [pokemonByType, dispatch]);
 
   useEffect(() => {
     if (!filterPokemon) {
@@ -47,7 +45,7 @@ export default (props) => {
       type: "SET_POKEMON_FILTERED_BY_SEARCH",
       payload: filteringPokemon,
     });
-  }, [filterPokemon]);
+  }, [filterPokemon, dispatch, filteringPokemon, pokemonByType]);
 
   return (
     <SearchBar className="searchBar">

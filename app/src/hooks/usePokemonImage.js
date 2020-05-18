@@ -15,18 +15,17 @@ export default function usePokemonByType(imageID) {
     });
   }
 
-  const isImageLoaded = async (imageURL) => {
-    try {
-      const result = await isImage(imageURL);
-      setImage(result);
-      setImageIsLoaded(true);
-    } catch (error) {
-      setImage(pokemonImageNotFound);
-      setImageIsLoaded(true);
-    }
-  };
-
   useEffect(() => {
+    const isImageLoaded = async (imageURL) => {
+      try {
+        const result = await isImage(imageURL);
+        setImage(result);
+        setImageIsLoaded(true);
+      } catch (error) {
+        setImage(pokemonImageNotFound);
+        setImageIsLoaded(true);
+      }
+    };
     isImageLoaded(imageURL);
   }, [imageURL]);
 

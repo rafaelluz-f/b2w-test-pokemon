@@ -15,7 +15,6 @@ export default (props) => {
   const numberCard = useSelector((state) => state.numberCard);
   const [isChecked, setIsChecked] = useState(false);
   const [card, setCard] = useState();
-  const numberCardStorage = 0;
 
   const handleNumberCard = (event) => {
     if ("" === card) {
@@ -35,12 +34,12 @@ export default (props) => {
   };
   const handleRemember = () => {
     if (!isChecked) {
-      setIsChecked(true);
+      setIsChecked("checked");
       localStorage.setItem("isRemember", true);
       localStorage.setItem("numberCard", numberCard);
       return;
     }
-    setIsChecked(false);
+    setIsChecked("");
     localStorage.removeItem("isRemember");
     localStorage.removeItem("numberCard");
   };
@@ -54,22 +53,22 @@ export default (props) => {
         payload: localStorage.getItem("numberCard"),
       });
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <CartFields className="cartFields">
       <p>
         <label>Adicione o número do seu Cartão:</label>
-        <input onChange={handleNumberCard} type="text" value={card} />
+        <input onChange={handleNumberCard} type="text" value={card || ""} />
       </p>
       <p>
         <input
           onChange={handleRemember}
           type="checkbox"
           placeholder="Lembrar cartão"
-          checked={isChecked}
+          checked={isChecked ? 1 : 0}
         />
-        <label for="horns">Lembrar Cartão</label>
+        <label>Lembrar Cartão</label>
       </p>
     </CartFields>
   );

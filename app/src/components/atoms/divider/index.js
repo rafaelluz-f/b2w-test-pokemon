@@ -9,11 +9,6 @@ const Divider = styled.div`
 
 export default (props) => {
   return (
-    <Divider
-      className="divider"
-      color={props.color}
-      width={props.width}
-      className="divider"
-    />
+    <Divider className="divider" color={props.color} width={props.width} />
   );
 };

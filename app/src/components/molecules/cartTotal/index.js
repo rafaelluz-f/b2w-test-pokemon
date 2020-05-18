@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 
@@ -20,27 +20,27 @@ const CartTotal = styled.div`
 
 export default (props) => {
   const cartProducts = useSelector((state) => state.cartProducts);
-
-  const totalPrice = () => {
-    let result = 0;
-    cartProducts.map((item) => {
-      let itemPrice = item.price.replace(/[^0-9\,]/g, "");
-      itemPrice = itemPrice.replace(",", ".");
-      itemPrice = parseFloat(itemPrice);
-
-      result = itemPrice + result;
-    });
-
-    return result.toFixed(2).toString().replace(".", ",");
-  };
+  const [totalPrice, setTotalPrice] = useState();
 
   useEffect(() => {
+    const totalPrice = () => {
+      let result = 0;
+      cartProducts.map((item) => {
+        let itemPrice = item.price.replace(/[^0-9,]/g, "");
+        itemPrice = itemPrice.replace(",", ".");
+        itemPrice = parseFloat(itemPrice);
+
+        return (result = itemPrice + result);
+      });
+
+      setTotalPrice(result.toFixed(2).toString().replace(".", ","));
+    };
     totalPrice();
-  }, [cartProducts]);
+  }, [cartProducts, totalPrice]);
   return (
     <CartTotal className="cartTotal">
       <span className="total">Total:</span>
-      <span className="total-price">R${totalPrice()}</span>
+      <span className="total-price">R${totalPrice}</span>
     </CartTotal>
   );
 };

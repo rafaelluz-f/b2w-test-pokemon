@@ -16,8 +16,8 @@ export default (props) => {
 
   return (
     <ProductImage className="productImage">
-      {!imageIsLoaded && <img src={loader} />}
-      {imageIsLoaded && <img src={image} />}
+      {!imageIsLoaded && <img alt="Pokemon" src={loader} />}
+      {imageIsLoaded && <img alt="Pokemon" src={image} />}
     </ProductImage>
   );
 };

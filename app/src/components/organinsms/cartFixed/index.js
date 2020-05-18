@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { HashLink as Link } from "react-router-hash-link";
 
 const CartFixed = styled.div`
@@ -69,8 +69,6 @@ const CartFixed = styled.div`
 `;
 
 export default (props) => {
-  const { name, imageID } = props;
-  const [price, setPrice] = useState();
   const cartProducts = useSelector((state) => state.cartProducts);
   const theme = useSelector((state) => state.theme);
 
@@ -82,7 +80,7 @@ export default (props) => {
           degradeColor2={theme.degradeColor2}
           className="cartFixed"
         >
-          <div class="cartFixedInner">
+          <div className="cartFixedInner">
             <p className="cartFixedMessage">{`Você tem ${cartProducts.length} produto no carrinho`}</p>
             <p className="cartFixedLink">
               <Link to="/#yourAnchorTag">Ver Carrinho</Link>

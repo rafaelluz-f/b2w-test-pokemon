@@ -58,14 +58,14 @@ const Column = styled.div`
 `;
 
 export default (props) => {
-  const [imageIsLoaded, image, imageURL] = usePokemonImage(props.id);
+  const [imageIsLoaded, image] = usePokemonImage(props.id);
 
   return (
     <CartItem className="cartItem row">
       <Column className="column">
         <span className="image">
-          {!imageIsLoaded && <img src={loader} />}
-          {imageIsLoaded && <img src={image} />}
+          {!imageIsLoaded && <img alt="Loader" src={loader} />}
+          {imageIsLoaded && <img alt="Pokemon" src={image} />}
         </span>
       </Column>
       <Column className="column">

@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import styled from "styled-components";
 import ProductCardList from "../organinsms/productCardList";
 import SearchBar from "../molecules/searchbar";
@@ -15,8 +14,6 @@ const Container = styled.div`
 `;
 
 function Home() {
-  const reduxPokemonTheme = useSelector((state) => state);
-
   return (
     <div>
       <Header />

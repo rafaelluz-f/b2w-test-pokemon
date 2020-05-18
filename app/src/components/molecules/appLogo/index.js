@@ -24,7 +24,7 @@ export default (props) => {
 
   return (
     <AppLogo className="appLogo">
-      <img src={logoByTheme} />
+      <img alt="AppLogo" src={logoByTheme} />
     </AppLogo>
   );
 };

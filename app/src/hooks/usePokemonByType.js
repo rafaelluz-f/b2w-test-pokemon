@@ -34,5 +34,5 @@ export default function usePokemonByType() {
     };
 
     searchApi();
-  }, []);
+  }, [dispatch, theme.pokemonTypeID]);
 }
