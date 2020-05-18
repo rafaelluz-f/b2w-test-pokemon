@@ -8,14 +8,8 @@ const CartItemList = styled.div`
 `;
 
 export default (props) => {
-  const dispatch = useDispatch();
   const cartProducts = useSelector((state) => state.cartProducts);
   const cartIsEmpty = useSelector((state) => state.cartIsEmpty);
-
-  // dispatch({
-  //   type: "ADD_CART_PRODUCT",
-  //   payload: { name, price, imageID },
-  // });
 
   return (
     <CartItemList className="CartItemList">
