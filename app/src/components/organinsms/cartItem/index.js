@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Divider from "../../atoms/divider";
 import usePokemonImage from "../../../hooks/usePokemonImage";
+import loader from "../../../assets/images/loader.gif";
 
 const CartItem = styled.div`
   display: flex;
@@ -9,7 +10,9 @@ const CartItem = styled.div`
   flex-flow: row wrap;
   img {
     border: 1px solid #000;
+    min-width: 50px;
     max-width: 50px;
+    height: 50px;
   }
   span {
     display: block;
@@ -61,7 +64,8 @@ export default (props) => {
     <CartItem className="cartItem row">
       <Column className="column">
         <span className="image">
-          <img src={image} />
+          {!imageIsLoaded && <img src={loader} />}
+          {imageIsLoaded && <img src={image} />}
         </span>
       </Column>
       <Column className="column">
