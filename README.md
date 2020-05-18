@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Índice
 
 - [How to use](#how-to-use)
-- [technology](#technology)
+- [Technology](#echnology)
 - [How to run with docker](#how-to-run-with-docker)
 - [How to run with yarn/npm](#how-to-run-with-yarn-npm)
 - [License](#license)
