@@ -94,7 +94,7 @@ In development...
 
 # Author
 
-- **Rafael Figueiredo** - [GitHub](https://github.com/rafaelfigueiredo-l/) | [Linkedin](https://www.linkedin.com/in/rafael-figueiredo-1a076a59/)
+**Rafael Figueiredo** - [GitHub](https://github.com/rafaelfigueiredo-l/) | [Linkedin](https://www.linkedin.com/in/rafael-figueiredo-1a076a59/)
 
 # License
 
