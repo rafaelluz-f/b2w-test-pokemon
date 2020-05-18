@@ -51,7 +51,7 @@ export default (props) => {
 
   return (
     <>
-      <CartButton className="cartButton">
+      <CartButton id="yourAnchorTag" className="cartButton">
         {cartProducts.length === 0 && (
           <button
             className="disabled"

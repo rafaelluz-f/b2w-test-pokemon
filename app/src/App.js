@@ -7,6 +7,7 @@ import useTheme from "./hooks/useTheme";
 import usePokemonByType from "./hooks/usePokemonByType";
 import backgroundDetail from "./assets/images/background.png";
 import Modal from "./components/organinsms/modal";
+import CartFixed from "./components/organinsms/cartFixed";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -61,11 +62,18 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: repeat-x;
     background-attachment: fixed;
     flex:1;
+    padding-bottom:150px;
   }
 
   #root > div {
     max-width:1200px;
     margin:0 auto;
+  }
+
+  @media(min-width:768px){
+    #root{
+      padding-bottom:40px;
+    }
   }
 `;
 
@@ -87,6 +95,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      <CartFixed />
     </Router>
   );
 }
