@@ -6,6 +6,7 @@ import Home from "./components/pages/home";
 import useTheme from "./hooks/useTheme";
 import usePokemonByType from "./hooks/usePokemonByType";
 import backgroundDetail from "./assets/images/background.png";
+import Modal from "./components/organinsms/modal";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -80,6 +81,7 @@ function App() {
         degradeColor1={theme.degradeColor1}
         degradeColor2={theme.degradeColor2}
       />
+      <Modal />
       <Switch>
         <Route path="/">
           <Home />

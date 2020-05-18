@@ -9,6 +9,7 @@ const INITIAL_STATE = {
   pokemonFilteredBySearch: [],
   cartIsEmpty: true,
   cartProducts: [],
+  isModalOpened: false,
 };
 function course(state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -46,12 +47,22 @@ function course(state = INITIAL_STATE, action) {
     case "SET_CART_IS_EMPTY":
       return {
         ...state,
-        cartIsEmpty: false,
+        cartIsEmpty: action.payload,
+      };
+    case "SET_CART_EMPTY":
+      return {
+        ...state,
+        cartProducts: [],
       };
     case "ADD_CART_PRODUCT":
       return {
         ...state,
         cartProducts: [...state.cartProducts, action.payload],
+      };
+    case "SET_MODAL_OPENED":
+      return {
+        ...state,
+        isModalOpened: action.payload,
       };
 
     default:
