@@ -22,6 +22,7 @@ const CartButton = styled.div`
 export default (props) => {
   const dispatch = useDispatch();
   const numberCard = useSelector((state) => state.numberCard);
+  const cartProducts = useSelector((state) => state.cartProducts);
   const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
@@ -45,11 +46,20 @@ export default (props) => {
       payload: true,
     });
   };
+  console.log(cartProducts);
 
   return (
     <>
       <CartButton className="cartButton">
-        {disabled && (
+        {cartProducts.length === 0 && (
+          <button
+            className="disabled"
+            onClick={() => alert("O carrinho está vazio")}
+          >
+            FINALIZAR
+          </button>
+        )}
+        {disabled && cartProducts.length !== 0 && (
           <button
             className="disabled"
             onClick={() => alert("Adicione um cartão para comprar")}
