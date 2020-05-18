@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 const ProductButton = styled.div`
   background: ${(props) =>
@@ -34,14 +34,22 @@ const ProductButton = styled.div`
 `;
 
 export default (props) => {
+  const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme);
+
+  const addProductToCart = (name, price) => {
+    dispatch({
+      type: "ADD_CART_PRODUCT",
+      payload: { name, price },
+    });
+  };
   return (
     <ProductButton
       degradeColor1={theme.degradeColor1}
       degradeColor2={theme.degradeColor2}
       className="productButton"
     >
-      <a onClick={() => console.log("teste")}>
+      <a onClick={() => addProductToCart(props.name, props.price)}>
         <span>COMPRAR</span>
       </a>
     </ProductButton>

@@ -7,6 +7,7 @@ const INITIAL_STATE = {
   pokemonLoading: "true",
   pokemonByType: [],
   pokemonFilteredBySearch: [],
+  cartProducts: [],
 };
 function course(state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -40,6 +41,11 @@ function course(state = INITIAL_STATE, action) {
       return {
         ...state,
         errorAppMessage: action.payload,
+      };
+    case "ADD_CART_PRODUCT":
+      return {
+        ...state,
+        cartProducts: [...state.cartProducts, action.payload],
       };
 
     default:
