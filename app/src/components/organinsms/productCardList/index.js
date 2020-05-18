@@ -11,6 +11,11 @@ const ProductCardList = styled.div`
   justify-content: space-between;
   width: 100%;
 
+  > p {
+    color: #fff;
+    text-align: center;
+  }
+
   @media (min-width: 992px) {
     width: 70%;
   }
@@ -19,6 +24,8 @@ const ProductCardList = styled.div`
 export default (props) => {
   const pokemonByType = useSelector((state) => state.pokemonByType);
   const pokemonLoading = useSelector((state) => state.pokemonLoading);
+  const errorAppMessage = useSelector((state) => state.errorAppMessage);
+  const errorApp = useSelector((state) => state.errorApp);
   const dispatch = useDispatch();
 
   const getIdPokemonThroughUrl = (url) => {
@@ -29,7 +36,8 @@ export default (props) => {
   };
   return (
     <ProductCardList className="productCardList">
-      {pokemonLoading && <p>1 carregando...</p>}
+      {pokemonLoading && <p>carregando...</p>}
+      {errorApp && <p>{errorAppMessage}</p>}
       {!pokemonLoading && (
         <>
           {pokemonByType.map((item, i) => (

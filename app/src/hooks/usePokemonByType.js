@@ -19,7 +19,18 @@ export default function usePokemonByType() {
           type: "SET_POKEMON_LOADING",
           payload: false,
         });
-      } catch (error) {}
+      } catch (error) {
+        dispatch({
+          type: "SET_POKEMON_LOADING",
+          payload: null,
+        });
+        dispatch({ type: "SET_ERROR_APP", payload: true });
+        dispatch({
+          type: "SET_ERROR_APP_MESSAGE",
+          payload:
+            "Ocorreu um erro enquanto buscavamos os produtos. Tente novamente!",
+        });
+      }
     };
 
     searchApi();

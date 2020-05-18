@@ -5,6 +5,7 @@ import { createGlobalStyle } from "styled-components";
 import Home from "./components/pages/home";
 import useTheme from "./hooks/useTheme";
 import usePokemonByType from "./hooks/usePokemonByType";
+import backgroundDetail from "./assets/images/background.png";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -14,12 +15,17 @@ const GlobalStyle = createGlobalStyle`
   }
   html{
     display:block;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
   }
   body {
     margin: 0;
     padding: 0;
     height: 100%;
     max-width: 100%;
+    width:100%;
     background: ${(props) =>
       props.degradeColor1 ? props.degradeColor1 : `black`};
     background: -moz-linear-gradient(top,  ${(props) =>
@@ -46,6 +52,16 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  #root{
+    background-image: url(${backgroundDetail});
+    background-position: center;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    max-width:1200px;
+    margin:0 auto;
+    flex:1;
   }
 `;
 

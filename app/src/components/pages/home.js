@@ -11,7 +11,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 15px;
 `;
 
 function Home() {
