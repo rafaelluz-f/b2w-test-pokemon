@@ -37,10 +37,10 @@ export default (props) => {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme);
 
-  const addProductToCart = (name, price) => {
+  const addProductToCart = (name, price, imageID) => {
     dispatch({
       type: "ADD_CART_PRODUCT",
-      payload: { name, price },
+      payload: { name, price, imageID },
     });
   };
   return (
@@ -49,7 +49,9 @@ export default (props) => {
       degradeColor2={theme.degradeColor2}
       className="productButton"
     >
-      <a onClick={() => addProductToCart(props.name, props.price)}>
+      <a
+        onClick={() => addProductToCart(props.name, props.price, props.imageID)}
+      >
         <span>COMPRAR</span>
       </a>
     </ProductButton>

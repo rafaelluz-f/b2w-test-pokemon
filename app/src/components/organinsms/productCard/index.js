@@ -32,7 +32,7 @@ export default (props) => {
       <ProductName name={name} />
       <Divider />
       <ProductPrice price={price} />
-      <ProductButton name={name} price={price} />
+      <ProductButton name={name} price={price} imageID={imageID} />
     </CardProduct>
   );
 };
