@@ -1,26 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import ProductNameText from "../../atoms/productNameText";
+import ProductNameTextStrong from "../../atoms/productNameTextStrong";
 
-const ProductName = styled.div`
-  span {
-    display: block;
-    text-align: center;
-    font-size: 24px;
-    text-transform: capitalize;
-  }
-
-  .strongName {
-    font-size: 26px;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-`;
+const ProductName = styled.div``;
 
 export default (props) => {
   return (
     <ProductName className="productName">
-      <span className="strongName">Nome</span>
-      <span>{props.name}</span>
+      <ProductNameTextStrong>Nome</ProductNameTextStrong>
+      <ProductNameText>{props.name}</ProductNameText>
     </ProductName>
   );
 };
