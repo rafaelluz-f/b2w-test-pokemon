@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CartText from "../../atoms/cartText";
+import CartTitleText from "../../atoms/cartTitleText";
 
 const CartTitle = styled.div`
   width: 100%;
@@ -12,7 +12,7 @@ const CartTitle = styled.div`
 export default (props) => {
   return (
     <CartTitle className="cartTitle">
-      <CartText>Carrinho</CartText>
+      <CartTitleText>Carrinho</CartTitleText>
     </CartTitle>
   );
 };
