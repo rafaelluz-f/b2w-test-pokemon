@@ -20,7 +20,7 @@ const Cart = styled.div`
 
 export default (props) => {
   return (
-    <Cart className="cart">
+    <Cart id="cart" className="cart">
       <CartTitle />
       <CartItemList />
       <CartFields />
