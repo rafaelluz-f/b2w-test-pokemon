@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ProductName from "../../molecules/productName";
 import ProductImage from "../../molecules/productImage";
 import ProductPrice from "../../molecules/productPrice";
-import ProductButton from "../../molecules/productButton";
+import ProductButton from "../../atoms/productButton";
 import Divider from "../../atoms/divider";
 import { generateRandomPrice } from "../../../helper/generateRandomPrice";
 
