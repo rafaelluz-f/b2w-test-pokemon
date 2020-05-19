@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { HashLink as Link } from "react-router-hash-link";
+import CartFixedButton from "../../atoms/cartFixedButton";
+import CartFixedMessage from "../../atoms/cartFixedMessage";
 
-const CartFixed = styled.div`
+const CartFixedContainer = styled.div`
  background: ${(props) =>
    props.degradeColor1 ? props.degradeColor1 : `black`};
     background: -moz-linear-gradient(top,  ${(props) =>
@@ -29,42 +30,11 @@ const CartFixed = styled.div`
   max-width: 100% !important;
   bottom: 0;
   box-shadow: 1px -10px 12px rgba(0,0,0,0.3);
+`;
 
-
-  .cartFixedInner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .cartFixedMessage {
-    text-align: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 13px;
-  }
-
-  .cartFixedLink {
-    text-align:center;
-    a{
-      margin-top:10px;
-      background: none;
-      border: 2px solid #fff;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      color:#fff;
-      text-decoration:none;
-  }
-
-  }
-
-  @media(min-width:768px){
-    height:5%;
-
-    .cartFixedLink a{
-      display:none;
-    }
-  }
+const CartFixedContainerLimit = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 export default (props) => {
@@ -74,18 +44,16 @@ export default (props) => {
   return (
     <>
       {cartProducts.length > 0 && (
-        <CartFixed
+        <CartFixedContainer
           degradeColor1={theme.degradeColor1}
           degradeColor2={theme.degradeColor2}
-          className="cartFixed"
+          className="cartFixedContainer"
         >
-          <div className="cartFixedInner">
-            <p className="cartFixedMessage">{`Você tem ${cartProducts.length} pokemon no carrinho`}</p>
-            <p className="cartFixedLink">
-              <Link to="/#cart">Ver Carrinho</Link>
-            </p>
-          </div>
-        </CartFixed>
+          <CartFixedContainerLimit className="cartFixedContainerLimit">
+            <CartFixedMessage>{`Você tem ${cartProducts.length} pokemon no carrinho`}</CartFixedMessage>
+            <CartFixedButton link="#cart" />
+          </CartFixedContainerLimit>
+        </CartFixedContainer>
       )}
     </>
   );

@@ -7,7 +7,7 @@ import useTheme from "./hooks/useTheme";
 import usePokemonByType from "./hooks/usePokemonByType";
 import backgroundDetail from "./assets/images/background.png";
 import Modal from "./components/organinsms/modal";
-import CartFixed from "./components/organinsms/cartFixed";
+import FloatFooterBar from "./components/organinsms/floatFooterBar";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -94,7 +94,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
-      <CartFixed />
+      <FloatFooterBar />
     </Router>
   );
 }
