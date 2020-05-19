@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppLogoImage /> should mount correctly AppLogoImage component 1`] = `
+<styled.img
+  alt="AltText"
+  className="appLogoImage"
+  src="pokemonImageNotFound.png"
+>
+  <img
+    alt="AltText"
+    className="sc-AxjAm dPerqe appLogoImage"
+    src="pokemonImageNotFound.png"
+  />
+</styled.img>
+`;

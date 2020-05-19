@@ -14,7 +14,7 @@ export default (props) => {
         props.onChange();
       }}
       type="checkbox"
-      checked={props.checked}
+      checked={props.checked ? 1 : 0}
       placeholder={props.placeholder}
     />
   );

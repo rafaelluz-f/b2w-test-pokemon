@@ -18,6 +18,10 @@ describe("<CardFieldCheckBox />", () => {
     expect(mounted).toMatchSnapshot();
   });
 
+  it("should unmount correctly CardFieldCheckBox component", () => {
+    expect(mounted.unmount()).toEqual({});
+  });
+
   it("should have className cardFieldCheckBox", () => {
     expect(wrapper.find(".cardFieldCheckBox")).toHaveLength(1);
   });

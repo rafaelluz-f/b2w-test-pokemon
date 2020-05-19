@@ -7,5 +7,7 @@ const AppLogoImage = styled.img`
   max-width: 500px;
 `;
 export default (props) => {
-  return <AppLogoImage alt={props.alt} src={props.src} />;
+  return (
+    <AppLogoImage className="appLogoImage" alt={props.alt} src={props.src} />
+  );
 };
