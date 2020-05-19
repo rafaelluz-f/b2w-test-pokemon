@@ -1,24 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
+import CartButtonDisabled from "../../atoms/cartButtonDisabled";
+import CartButtonEnabled from "../../atoms/cartButtonEnabled";
 
-const CartButton = styled.div`
-  button {
-    background: green;
-    color: #fff;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 32px;
-    padding: 25px 20px;
-    width: 100%;
-    border: none;
-    cursor: pointer;
-  }
-  .disabled {
-    background: #a22525;
-    cursor: default;
-  }
-`;
+const CartButton = styled.div``;
 
 export default (props) => {
   const dispatch = useDispatch();
@@ -50,28 +36,22 @@ export default (props) => {
   };
 
   return (
-    <>
-      <CartButton id="yourAnchorTag" className="cartButton">
-        {cartProducts.length === 0 && (
-          <button
-            className="disabled"
-            onClick={() => alert(theme.cartNeedsProducts)}
-          >
-            FINALIZAR
-          </button>
-        )}
-        {disabled && cartProducts.length !== 0 && (
-          <button
-            className="disabled"
-            onClick={() => alert(theme.cartNeedsCardNumber)}
-          >
-            FINALIZAR
-          </button>
-        )}
-        {!disabled && cartProducts.length !== 0 && (
-          <button onClick={() => checkout()}>FINALIZAR</button>
-        )}
-      </CartButton>
-    </>
+    <CartButton id="yourAnchorTag" className="cartButton">
+      {cartProducts.length === 0 && (
+        <CartButtonDisabled function={() => alert(theme.cartNeedsProducts)}>
+          Finalizar
+        </CartButtonDisabled>
+      )}
+      {disabled && cartProducts.length !== 0 && (
+        <CartButtonDisabled function={() => alert(theme.cartNeedsCardNumber)}>
+          Finalizar
+        </CartButtonDisabled>
+      )}
+      {!disabled && cartProducts.length !== 0 && (
+        <CartButtonEnabled function={() => checkout()}>
+          FINALIZAR
+        </CartButtonEnabled>
+      )}
+    </CartButton>
   );
 };
