@@ -4,7 +4,7 @@ import CartTitle from "../../molecules/cartTitle";
 import CartButton from "../../molecules/cartButton";
 import CartTotal from "../../molecules/cartTotal";
 import CartItemList from "../../organinsms/cartItemList";
-import CartFields from "../../organinsms/cartFields";
+import CartFields from "../../molecules/cartCardFields";
 
 const Cart = styled.div`
   background: #fff;

@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
 import { useDispatch, useSelector } from "react-redux";
+import CartFieldLabel from "../../atoms/cardFieldLabel";
+import CardFieldInput from "../../atoms/cardFieldInput";
+import CardFieldCheckBox from "../../atoms/cardFieldCheckBox";
 
-const CartFields = styled.div`
-  label {
-    font-size: 11px;
-    text-transform: uppercase;
-  }
-`;
+const CartFields = styled.div``;
 
 export default (props) => {
   const dispatch = useDispatch();
@@ -32,6 +29,7 @@ export default (props) => {
       localStorage.setItem("numberCard", event.target.value);
     }
   };
+
   const handleRemember = () => {
     if (!isChecked) {
       setIsChecked("checked");
@@ -58,17 +56,16 @@ export default (props) => {
   return (
     <CartFields className="cartFields">
       <p>
-        <label>Adicione o número do seu Cartão:</label>
-        <input onChange={handleNumberCard} type="text" value={card || ""} />
+        <CartFieldLabel>Adicione o número do seu Cartão:</CartFieldLabel>
+        <CardFieldInput function={handleNumberCard} value={card} />
       </p>
       <p>
-        <input
+        <CardFieldCheckBox
           onChange={handleRemember}
-          type="checkbox"
-          placeholder="Lembrar cartão"
+          placeholder={"Lembrar cartão"}
           checked={isChecked ? 1 : 0}
         />
-        <label>Lembrar Cartão</label>
+        <CartFieldLabel>Lembrar Cartão</CartFieldLabel>
       </p>
     </CartFields>
   );
