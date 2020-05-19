@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartFieldLabel /> should mount correctly CartFieldLabel component 1`] = `
+<styled.label
+  className="cartFieldLabel"
+>
+  <label
+    className="sc-AxjAm kizGHW cartFieldLabel"
+  >
+    Texto
+  </label>
+</styled.label>
+`;
