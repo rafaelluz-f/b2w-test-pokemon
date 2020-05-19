@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
+import CartTotalText from "../../atoms/cartTotalText";
+import CartTotalPriceText from "../../atoms/cartTotalPriceText";
 
 const CartTotal = styled.div`
   overflow: hidden;
@@ -10,9 +12,6 @@ const CartTotal = styled.div`
   text-transform: uppercase;
   font-size: 19px;
   padding: 25px 20px;
-  .total {
-    float: left;
-  }
   .total-price {
     float: right;
   }
@@ -39,8 +38,8 @@ export default (props) => {
   }, [cartProducts, totalPrice]);
   return (
     <CartTotal className="cartTotal">
-      <span className="total">Total:</span>
-      <span className="total-price">R${totalPrice}</span>
+      <CartTotalText>Total:</CartTotalText>
+      <CartTotalPriceText>R${totalPrice}</CartTotalPriceText>
     </CartTotal>
   );
 };
