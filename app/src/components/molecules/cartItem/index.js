@@ -2,25 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import Divider from "../../atoms/divider";
 import usePokemonImage from "../../../hooks/usePokemonImage";
-import loader from "../../../assets/images/loader.gif";
+import Loader from "../../atoms/loader";
+import CartItemImage from "../../atoms/cartItemImage";
+import CartItemName from "../../atoms/cartItemName";
+import CartItemPrice from "../../atoms/cartItemPrice";
 
 const CartItem = styled.div`
   display: flex;
   width: 100%;
   flex-flow: row wrap;
-  img {
-    border: 1px solid #000;
-    min-width: 50px;
-    max-width: 50px;
-    height: 50px;
-  }
+
   span {
     display: block;
   }
   padding: 10px 15px 0;
-  .image {
-    flex: 0;
-  }
 
   &:last-child {
     .divider {
@@ -29,7 +24,7 @@ const CartItem = styled.div`
   }
 `;
 
-const Column = styled.div`
+const CartItemColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,16 +57,16 @@ export default (props) => {
 
   return (
     <CartItem className="cartItem row">
-      <Column className="column">
+      <CartItemColumn className="column">
         <span className="image">
-          {!imageIsLoaded && <img alt="Loader" src={loader} />}
-          {imageIsLoaded && <img alt="Pokemon" src={image} />}
+          {!imageIsLoaded && <Loader width="50px" />}
+          {imageIsLoaded && <CartItemImage alt="Pokemon" src={image} />}
         </span>
-      </Column>
-      <Column className="column">
-        <span>{props.title}</span>
-        <span>{props.price}</span>
-      </Column>
+      </CartItemColumn>
+      <CartItemColumn className="column">
+        <CartItemName>{props.title}</CartItemName>
+        <CartItemPrice>{props.price}</CartItemPrice>
+      </CartItemColumn>
       <Divider />
     </CartItem>
   );

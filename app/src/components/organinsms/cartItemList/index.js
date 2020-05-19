@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CartItem from "../cartItem";
+import CartItem from "../../molecules/cartItem";
 import { useSelector } from "react-redux";
 
 const CartItemList = styled.div`

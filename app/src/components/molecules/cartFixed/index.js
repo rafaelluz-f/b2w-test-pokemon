@@ -30,6 +30,10 @@ const CartFixedContainer = styled.div`
   max-width: 100% !important;
   bottom: 0;
   box-shadow: 1px -10px 12px rgba(0,0,0,0.3);
+
+  @media(min-width:768px){
+    height:5%;
+  }
 `;
 
 const CartFixedContainerLimit = styled.div`
