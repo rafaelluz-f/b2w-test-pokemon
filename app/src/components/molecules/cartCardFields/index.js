@@ -32,14 +32,15 @@ export default (props) => {
 
   const handleRemember = () => {
     if (!isChecked) {
-      setIsChecked("checked");
+      setIsChecked(1);
       localStorage.setItem("isRemember", true);
       localStorage.setItem("numberCard", numberCard);
-      return;
+      return true;
     }
-    setIsChecked("");
+    setIsChecked(0);
     localStorage.removeItem("isRemember");
     localStorage.removeItem("numberCard");
+    return false;
   };
 
   useEffect(() => {
@@ -62,8 +63,8 @@ export default (props) => {
       <p>
         <CardFieldCheckBox
           onChange={handleRemember}
-          placeholder={"Lembrar cartão"}
-          checked={isChecked ? 1 : 0}
+          placeholder="Lembrar cartão"
+          checked={isChecked}
         />
         <CartFieldLabel>Lembrar Cartão</CartFieldLabel>
       </p>

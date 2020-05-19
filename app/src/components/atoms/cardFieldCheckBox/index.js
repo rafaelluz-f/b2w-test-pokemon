@@ -10,9 +10,12 @@ export default (props) => {
   return (
     <CardFieldCheckBox
       className="cardFieldCheckBox"
-      onChange={props.onChange}
+      onChange={() => {
+        props.onChange();
+      }}
       type="checkbox"
       checked={props.checked}
+      placeholder={props.placeholder}
     />
   );
 };

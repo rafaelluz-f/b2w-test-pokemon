@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardFieldCheckBox /> should mount correctly CardFieldCheckBox component 1`] = `
+<styled.input
+  checked={0}
+  className="cardFieldCheckBox"
+  onChange={[Function]}
+  placeholder="Something"
+  type="checkbox"
+>
+  <input
+    checked={0}
+    className="sc-AxjAm dLgPKd cardFieldCheckBox"
+    onChange={[Function]}
+    placeholder="Something"
+    type="checkbox"
+  />
+</styled.input>
+`;
