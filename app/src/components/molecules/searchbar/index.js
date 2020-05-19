@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
+import SearchBarInput from "../../atoms/searchBarInput";
 
 const SearchBar = styled.div`
   text-align: center;
   padding: 15px;
-
-  input {
-    border: 2px solid #bebebe;
-    width: 100%;
-    border-radius: 10px;
-    padding: 20px;
-  }
 `;
 
 export default (props) => {
@@ -49,11 +43,7 @@ export default (props) => {
 
   return (
     <SearchBar className="searchBar">
-      <input
-        onChange={handleChange}
-        type="text"
-        placeholder="Procurar Pokemon..."
-      />
+      <SearchBarInput function={handleChange} />
     </SearchBar>
   );
 };
