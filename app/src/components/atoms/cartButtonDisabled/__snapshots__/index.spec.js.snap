@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartButtonDisabled /> should mount correctly CartButtonDisabled component 1`] = `
+<styled.button
+  className="CartButtonDisabled disabled"
+>
+  <button
+    className="sc-AxjAm bEQOOo CartButtonDisabled disabled"
+  >
+    Texto
+  </button>
+</styled.button>
+`;
