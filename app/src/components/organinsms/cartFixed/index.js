@@ -80,7 +80,7 @@ export default (props) => {
           className="cartFixed"
         >
           <div className="cartFixedInner">
-            <p className="cartFixedMessage">{`Você tem ${cartProducts.length} produto no carrinho`}</p>
+            <p className="cartFixedMessage">{`Você tem ${cartProducts.length} pokemon no carrinho`}</p>
             <p className="cartFixedLink">
               <Link to="/#yourAnchorTag">Ver Carrinho</Link>
             </p>
