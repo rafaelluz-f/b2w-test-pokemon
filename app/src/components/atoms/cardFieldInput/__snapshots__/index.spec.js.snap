@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardFieldInput /> should mount correctly CardFieldInput component 1`] = `
+<styled.input
+  className="cardFieldInput"
+  onChange={[Function]}
+  type="text"
+  value="ValueText"
+>
+  <input
+    className="sc-AxjAm dLgPKd cardFieldInput"
+    onChange={[Function]}
+    type="text"
+    value="ValueText"
+  />
+</styled.input>
+`;
