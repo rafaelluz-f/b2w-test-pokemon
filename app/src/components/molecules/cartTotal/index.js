@@ -12,9 +12,6 @@ const CartTotal = styled.div`
   text-transform: uppercase;
   font-size: 19px;
   padding: 25px 20px;
-  .total-price {
-    float: right;
-  }
 `;
 
 export default (props) => {

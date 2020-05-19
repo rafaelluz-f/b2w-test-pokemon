@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import loader from "../../../assets/images/loader.gif";
 import usePokemonImage from "../../../hooks/usePokemonImage";
+import ProductImageLoaded from "../../atoms/productImageLoaded";
+import Loader from "../../atoms/loader";
 
 const ProductImage = styled.div`
   text-align: center;
@@ -16,8 +17,8 @@ export default (props) => {
 
   return (
     <ProductImage className="productImage">
-      {!imageIsLoaded && <img alt="Pokemon" src={loader} />}
-      {imageIsLoaded && <img alt="Pokemon" src={image} />}
+      {!imageIsLoaded && <Loader />}
+      {imageIsLoaded && <ProductImageLoaded alt="Pokemon" src={image} />}
     </ProductImage>
   );
 };
