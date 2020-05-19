@@ -42,12 +42,11 @@ const GlobalStyle = createGlobalStyle`
       props.degradeColor1 ? props.degradeColor1 : `black`} 0%,${(props) =>
   props.degradeColor2 ? props.degradeColor2 : `black`} 48%,${(props) =>
   props.degradeColor1 ? props.degradeColor1 : `black`} 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='${(
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=${(
       props
-    ) =>
-      props.degradeColor1 ? props.degradeColor1 : `black`}', endColorstr='${(
+    ) => (props.degradeColor1 ? props.degradeColor1 : `black`)}, endColorstr=${(
   props
-) => (props.degradeColor1 ? props.degradeColor1 : `black`)}',GradientType=0 );
+) => (props.degradeColor1 ? props.degradeColor1 : `black`)},GradientType=0 );
 
     background-position: center;
     background-size:contain;

@@ -3,25 +3,30 @@ import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 
 const ProductButton = styled.div`
-
   button {
-  background: ${(props) =>
-    props.degradeColor1 ? props.degradeColor1 : `black`};
-  background: -moz-linear-gradient(top, ${(props) =>
-    props.degradeColor1 ? props.degradeColor1 : `black`} 1%, ${(props) =>
-  props.degradeColor2 ? props.degradeColor2 : `black`} 100%);
-  background: -webkit-linear-gradient(top, ${(props) =>
-    props.degradeColor1 ? props.degradeColor1 : `black`} 1%, ${(props) =>
-  props.degradeColor2 ? props.degradeColor2 : `black`} 100%);
-  background: linear-gradient(to bottom, ${(props) =>
-    props.degradeColor1 ? props.degradeColor1 : `black`} 1%, ${(props) =>
-  props.degradeColor2 ? props.degradeColor2 : `black`} 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='${(
-    props
-  ) => (props.degradeColor1 ? props.degradeColor1 : `black`)}', endColorstr='${(
+    background: ${(props) =>
+      props.degradeColor1 ? props.degradeColor1 : `black`};
+    background: -moz-linear-gradient(
+      top,
+      ${(props) => (props.degradeColor1 ? props.degradeColor1 : `black`)} 0%,
+      ${(props) => (props.degradeColor2 ? props.degradeColor2 : `black`)} 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      ${(props) => (props.degradeColor1 ? props.degradeColor1 : `black`)} 0%,
+      ${(props) => (props.degradeColor2 ? props.degradeColor2 : `black`)} 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      ${(props) => (props.degradeColor1 ? props.degradeColor1 : `black`)} 0%,
+      ${(props) => (props.degradeColor2 ? props.degradeColor2 : `black`)} 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=${(
+      props
+    ) => (props.degradeColor1 ? props.degradeColor1 : `black`)}, endColorstr=${(
   props
-) => (props.degradeColor2 ? props.degradeColor2 : `black`)}',GradientType=0 );
-  border-radius: 0 0 10px 10px;
+) => (props.degradeColor2 ? props.degradeColor2 : `black`)},GradientType=0 );
+    border-radius: 0 0 10px 10px;
     display: block;
     text-align: center;
     color: #fff;
@@ -29,9 +34,9 @@ const ProductButton = styled.div`
     padding: 20px;
     font-size: 19px;
     cursor: pointer;
-    text-decoration:none;
-    width:100%;
-    border:0;
+    text-decoration: none;
+    width: 100%;
+    border: 0;
   }
 `;
 
