@@ -90,7 +90,10 @@ npm start
 
 # How to run tests
 
-In development...
+```
+cd app
+yarn test
+```
 
 # Author
 
