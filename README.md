@@ -1,4 +1,5 @@
 # B2W APP POKEMON
+![Node.js CI](https://github.com/rafaelfigueiredo-l/b2w-test-pokemon/workflows/Node.js%20CI/badge.svg)
 
 ![](app.gif)
 
