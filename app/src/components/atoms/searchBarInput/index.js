@@ -10,12 +10,10 @@ const SearchBarInput = styled.input`
 export default (props) => {
   return (
     <SearchBarInput
-      className="SearchBarInput"
+      className="searchBarInput"
       onChange={props.function}
       type="text"
       placeholder="Procurar Pokemon..."
-    >
-      {props.children}
-    </SearchBarInput>
+    />
   );
 };

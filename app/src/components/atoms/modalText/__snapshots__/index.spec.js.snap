@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalText /> should mount correctly ModalText component 1`] = `
+<styled.h1
+  className="modalText"
+>
+  <h1
+    className="sc-AxjAm jWlVxK modalText"
+  >
+    Texto
+  </h1>
+</styled.h1>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalButton /> should mount correctly ModalButton component 1`] = `
+<styled.button
+  className="modalButton"
+>
+  <button
+    className="sc-AxjAm lhOTJ modalButton"
+  >
+    Teste
+  </button>
+</styled.button>
+`;

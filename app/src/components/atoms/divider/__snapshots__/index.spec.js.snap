@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Divider /> should mount correctly Divider component 1`] = `
+<styled.div
+  className="divider"
+  color="red"
+  width="100%"
+>
+  <div
+    className="sc-AxjAm eTaBtL divider"
+    color="red"
+    width="100%"
+  />
+</styled.div>
+`;

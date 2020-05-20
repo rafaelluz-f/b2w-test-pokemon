@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductPriceTextStrong /> should mount correctly ProductPriceTextStrong component 1`] = `
+<styled.span
+  className="productPriceTextStrong"
+>
+  <span
+    className="sc-AxjAm jUcFsX productPriceTextStrong"
+  >
+    Texto
+  </span>
+</styled.span>
+`;

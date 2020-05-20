@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBarInput /> should mount correctly SearchBarInput component 1`] = `
+<styled.input
+  className="searchBarInput"
+  placeholder="Procurar Pokemon..."
+  type="text"
+>
+  <input
+    className="sc-AxjAm fBBAip searchBarInput"
+    placeholder="Procurar Pokemon..."
+    type="text"
+  />
+</styled.input>
+`;

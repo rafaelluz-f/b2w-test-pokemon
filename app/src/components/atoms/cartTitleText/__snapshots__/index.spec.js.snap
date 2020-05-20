@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartText /> should mount correctly CartText component 1`] = `
+<styled.span
+  className="cartText"
+>
+  <span
+    className="sc-AxjAm eKjPIR cartText"
+  >
+    Texto
+  </span>
+</styled.span>
+`;

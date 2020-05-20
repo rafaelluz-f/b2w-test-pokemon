@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartFixedButton /> should mount correctly CartFixedButton component 1`] = `
+<styled.p
+  className="cartFixedButton"
+>
+  <p
+    className="sc-AxjAm cpnBmN cartFixedButton"
+  >
+    <Link
+      onClick={[Function]}
+      to="http://www.something.com"
+    >
+      <LinkAnchor
+        href="/http://www.something.com"
+        navigate={[Function]}
+        onClick={[Function]}
+      >
+        <a
+          href="/http://www.something.com"
+          onClick={[Function]}
+        >
+          Ver Carrinho
+        </a>
+      </LinkAnchor>
+    </Link>
+  </p>
+</styled.p>
+`;

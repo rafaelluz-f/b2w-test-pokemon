@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductButton /> should mount correctly ProductButton component 1`] = `
+<styled.div
+  className="productButton"
+>
+  <div
+    className="sc-AxjAm bkRpRN productButton"
+  >
+    <button
+      onClick={[Function]}
+    >
+      COMPRAR
+    </button>
+  </div>
+</styled.div>
+`;
