@@ -90,9 +90,17 @@ npm start
 
 # How to run tests
 
+yarn:
+
 ```
 cd app
 yarn test
+```
+
+npm:
+```
+cd app
+npm test
 ```
 
 # Author
