@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartTotal /> should mount correctly CartTotal component 1`] = `
+<styled.div
+  className="cartTotal"
+>
+  <div
+    className="sc-AxiKw iKAYzS cartTotal"
+  >
+    <styled.span
+      className="cartTotalText"
+    >
+      <span
+        className="sc-AxjAm jtICzP cartTotalText"
+      >
+        Total:
+      </span>
+    </styled.span>
+    <styled.span
+      className="cartTotalPriceText"
+    >
+      <span
+        className="sc-AxirZ hAnsMP cartTotalPriceText"
+      >
+        R$
+        0,00
+      </span>
+    </styled.span>
+  </div>
+</styled.div>
+`;

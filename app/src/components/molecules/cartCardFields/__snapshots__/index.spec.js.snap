@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartFields /> should mount correctly CartFields component 1`] = `
+<styled.div
+  className="cartFields"
+>
+  <div
+    className="sc-AxhCb ccMvAG cartFields"
+  >
+    <p>
+      <styled.label
+        className="cartFieldLabel"
+      >
+        <label
+          className="sc-AxjAm kizGHW cartFieldLabel"
+        >
+          Adicione o número do seu Cartão:
+        </label>
+      </styled.label>
+      <styled.input
+        className="cardFieldInput"
+        onChange={[Function]}
+        type="text"
+        value=""
+      >
+        <input
+          className="sc-AxirZ eSWeaK cardFieldInput"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </styled.input>
+    </p>
+    <p>
+      <styled.input
+        checked={0}
+        className="cardFieldCheckBox"
+        onChange={[Function]}
+        placeholder="Lembrar cartão"
+        type="checkbox"
+      >
+        <input
+          checked={0}
+          className="sc-AxiKw krEJia cardFieldCheckBox"
+          onChange={[Function]}
+          placeholder="Lembrar cartão"
+          type="checkbox"
+        />
+      </styled.input>
+      <styled.label
+        className="cartFieldLabel"
+      >
+        <label
+          className="sc-AxjAm kizGHW cartFieldLabel"
+        >
+          Lembrar Cartão
+        </label>
+      </styled.label>
+    </p>
+  </div>
+</styled.div>
+`;

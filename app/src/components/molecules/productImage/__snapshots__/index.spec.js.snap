@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductImage /> should mount correctly ProductImage component 1`] = `
+<styled.div
+  className="productImage"
+>
+  <div
+    className="sc-AxiKw hIDtSO productImage"
+  >
+    <styled.img
+      alt="Loader"
+      className="loader"
+      src="loader.gif"
+    >
+      <img
+        alt="Loader"
+        className="sc-AxirZ iDbaau loader"
+        src="loader.gif"
+      />
+    </styled.img>
+  </div>
+</styled.div>
+`;

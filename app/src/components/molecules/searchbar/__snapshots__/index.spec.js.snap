@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductPrice /> should mount correctly SearchBar component 1`] = `
+<styled.div
+  className="searchBar"
+>
+  <div
+    className="sc-AxirZ ePyFoP searchBar"
+  >
+    <styled.input
+      className="searchBarInput"
+      onChange={[Function]}
+      placeholder="Procurar Pokemon..."
+      type="text"
+    >
+      <input
+        className="sc-AxjAm fBBAip searchBarInput"
+        onChange={[Function]}
+        placeholder="Procurar Pokemon..."
+        type="text"
+      />
+    </styled.input>
+  </div>
+</styled.div>
+`;

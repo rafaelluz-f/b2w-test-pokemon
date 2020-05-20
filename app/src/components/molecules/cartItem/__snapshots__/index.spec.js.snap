@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartItem /> should mount correctly CartItem component 1`] = `
+<styled.div
+  className="cartItem row"
+>
+  <div
+    className="sc-AxgMl gmXeLJ cartItem row"
+  >
+    <styled.div
+      className="column"
+    >
+      <div
+        className="sc-AxheI jLIeQh column"
+      >
+        <span
+          className="image"
+        >
+          <styled.img
+            alt="Loader"
+            className="loader"
+            src="loader.gif"
+            width="50px"
+          >
+            <img
+              alt="Loader"
+              className="sc-AxirZ gEUYej loader"
+              src="loader.gif"
+              width="50px"
+            />
+          </styled.img>
+        </span>
+      </div>
+    </styled.div>
+    <styled.div
+      className="column"
+    >
+      <div
+        className="sc-AxheI jLIeQh column"
+      >
+        <styled.span
+          className="cartItemName"
+        >
+          <span
+            className="sc-AxhCb ccMvAG cartItemName"
+          />
+        </styled.span>
+        <styled.span
+          className="cartItemPrice"
+        >
+          <span
+            className="sc-AxhUy kMyssT cartItemPrice"
+          />
+        </styled.span>
+      </div>
+    </styled.div>
+    <styled.div
+      className="divider"
+    >
+      <div
+        className="sc-AxjAm jjIFiv divider"
+      />
+    </styled.div>
+  </div>
+</styled.div>
+`;
