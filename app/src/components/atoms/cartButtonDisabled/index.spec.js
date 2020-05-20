@@ -9,7 +9,7 @@ describe("<CartButtonDisabled />", () => {
   const wrapper = shallow(component);
 
   it("should mount correctly CartButtonDisabled component", () => {
-    expect(wrapper.find(".disabled")).toHaveLength(1);
+    expect(wrapper.find(".cartButtonDisabled")).toHaveLength(1);
     expect(mounted).toMatchSnapshot();
   });
 
@@ -18,6 +18,6 @@ describe("<CartButtonDisabled />", () => {
   });
 
   it("should have a children", () => {
-    expect(wrapper.find(".disabled").children()).toHaveLength(1);
+    expect(wrapper.find(".cartButtonDisabled").children()).toHaveLength(1);
   });
 });

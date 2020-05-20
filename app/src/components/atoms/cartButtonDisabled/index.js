@@ -14,10 +14,7 @@ const CartButtonDisabled = styled.button`
 `;
 export default (props) => {
   return (
-    <CartButtonDisabled
-      className="CartButtonDisabled disabled"
-      onClick={props.function}
-    >
+    <CartButtonDisabled className="cartButtonDisabled" onClick={props.function}>
       {props.children}
     </CartButtonDisabled>
   );
