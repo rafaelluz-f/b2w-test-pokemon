@@ -31,7 +31,7 @@ $ node --version
 # How to use
 
 You can see this app at following links:
-- https://5ec4af5465804503498a1b1e--optimistic-albattani-05e070.netlify.app/ (ghost)
+- https://5ec4bffb7b0b53d3492819a4--eager-swanson-37a534.netlify.app/ (ghost)
 - https://happy-keller-e30b9d.netlify.app/ (water)
 - https://pensive-turing-d0e562.netlify.app/ (fire)
 
