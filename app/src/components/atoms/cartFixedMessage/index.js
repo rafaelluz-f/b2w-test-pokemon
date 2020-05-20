@@ -10,7 +10,7 @@ const CartFixedMessage = styled.p`
 
 export default (props) => {
   return (
-    <CartFixedMessage className="CartFixedMessage">
+    <CartFixedMessage className="cartFixedMessage">
       {props.children}
     </CartFixedMessage>
   );

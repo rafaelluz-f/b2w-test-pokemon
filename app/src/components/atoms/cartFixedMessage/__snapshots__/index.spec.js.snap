@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartFixedMessage /> should mount correctly CartFixedMessage component 1`] = `
+<styled.p
+  className="cartFixedMessage"
+>
+  <p
+    className="sc-AxjAm ehpYJS cartFixedMessage"
+  >
+    Teste
+  </p>
+</styled.p>
+`;

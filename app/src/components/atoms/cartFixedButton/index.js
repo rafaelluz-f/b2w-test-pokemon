@@ -24,7 +24,7 @@ const CartFixedButton = styled.p`
 `;
 export default (props) => {
   return (
-    <CartFixedButton>
+    <CartFixedButton className="cartFixedButton">
       <Link to={props.link}>Ver Carrinho</Link>
     </CartFixedButton>
   );
