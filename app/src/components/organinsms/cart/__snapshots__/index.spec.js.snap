@@ -54,13 +54,13 @@ exports[`<ProductPrice /> should mount correctly Cart component 1`] = `
           <styled.input
             className="cardFieldInput"
             onChange={[Function]}
-            type="text"
+            type="number"
             value=""
           >
             <input
               className="sc-fzqBZW khKONs cardFieldInput"
               onChange={[Function]}
-              type="text"
+              type="number"
               value=""
             />
           </styled.input>

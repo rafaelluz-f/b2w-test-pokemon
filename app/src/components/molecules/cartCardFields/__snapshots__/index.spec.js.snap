@@ -20,13 +20,13 @@ exports[`<CartFields /> should mount correctly CartFields component 1`] = `
       <styled.input
         className="cardFieldInput"
         onChange={[Function]}
-        type="text"
+        type="number"
         value=""
       >
         <input
           className="sc-AxirZ eSWeaK cardFieldInput"
           onChange={[Function]}
-          type="text"
+          type="number"
           value=""
         />
       </styled.input>

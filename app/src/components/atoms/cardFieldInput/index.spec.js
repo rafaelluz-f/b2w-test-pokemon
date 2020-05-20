@@ -20,7 +20,7 @@ describe("<CardFieldInput />", () => {
   });
 
   it("should render input type checkbox", () => {
-    expect(wrapper.find("[type='text']")).toHaveLength(1);
+    expect(wrapper.find("[type='number']")).toHaveLength(1);
   });
 
   it("should call onChange function", () => {

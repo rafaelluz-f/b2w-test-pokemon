@@ -13,7 +13,7 @@ export default (props) => {
       onChange={(event) => {
         props.function(event);
       }}
-      type="text"
+      type="number"
       value={props.value || ""}
     />
   );

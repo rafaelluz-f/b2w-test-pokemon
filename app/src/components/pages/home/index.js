@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import ProductCardList from "../organinsms/productCardList";
-import SearchBar from "../molecules/searchbar";
-import Header from "../organinsms/header";
-import Cart from "../organinsms/cart";
+import ProductCardList from "../../organinsms/productCardList";
+import SearchBar from "../../molecules/searchbar";
+import Header from "../../organinsms/header";
+import Cart from "../../organinsms/cart";
 
 const Container = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ const Container = styled.div`
 
 function Home() {
   return (
-    <div>
+    <div className="home">
       <Header />
       <SearchBar />
       <Container>
