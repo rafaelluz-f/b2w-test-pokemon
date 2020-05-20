@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartItemImage /> should mount correctly CartItemImage component 1`] = `
+<styled.img
+  alt="AltText"
+  className="cartItemImage"
+  src="pokemonImageNotFound.png"
+>
+  <img
+    alt="AltText"
+    className="sc-AxjAm iBHzSM cartItemImage"
+    src="pokemonImageNotFound.png"
+  />
+</styled.img>
+`;
