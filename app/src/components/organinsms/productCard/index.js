@@ -7,7 +7,7 @@ import ProductButton from "../../atoms/productButton";
 import Divider from "../../atoms/divider";
 import { generateRandomPrice } from "../../../helper/generateRandomPrice";
 
-const CardProduct = styled.div`
+const ProductCard = styled.div`
   width: 100%;
   flex-basis: 100%;
   margin: 30px 5px;
@@ -33,12 +33,12 @@ export default (props) => {
     setPrice(generateRandomPrice());
   }, []);
   return (
-    <CardProduct className="cardProduct">
+    <ProductCard className="productCard">
       <ProductImage imageID={imageID} />
       <ProductName name={name} />
       <Divider />
       <ProductPrice price={price} />
       <ProductButton name={name} price={price} imageID={imageID} />
-    </CardProduct>
+    </ProductCard>
   );
 };

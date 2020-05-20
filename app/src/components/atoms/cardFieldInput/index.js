@@ -10,8 +10,8 @@ export default (props) => {
   return (
     <CardFieldInput
       className="cardFieldInput"
-      onChange={() => {
-        props.function();
+      onChange={(event) => {
+        props.function(event);
       }}
       type="text"
       value={props.value || ""}

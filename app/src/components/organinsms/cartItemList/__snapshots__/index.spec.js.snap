@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductPrice /> should mount correctly CartItemList component 1`] = `
+<styled.div
+  className="cartItemList"
+>
+  <div
+    className="sc-Axmtr bgfpSS cartItemList"
+  >
+    <p />
+  </div>
+</styled.div>
+`;

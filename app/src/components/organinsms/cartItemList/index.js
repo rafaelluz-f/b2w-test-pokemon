@@ -17,7 +17,7 @@ export default (props) => {
   const theme = useSelector((state) => state.theme);
 
   return (
-    <CartItemList className="CartItemList">
+    <CartItemList className="cartItemList">
       {cartIsEmpty && <p>{theme.cartIsEmpty}</p>}
       {!cartIsEmpty && (
         <>

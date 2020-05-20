@@ -45,7 +45,7 @@ export default (props) => {
     return null;
   }
   return (
-    <Modal>
+    <Modal className="modal">
       <ModalContainer className="modalContainer">
         <ModalTitle>OBRIGADO!!!</ModalTitle>
         <ModalText>Você ganhou 15% de cashback do valor total!</ModalText>

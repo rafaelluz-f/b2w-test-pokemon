@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductPrice /> should mount correctly FloatFooterBar component 1`] = `
+<styled.div
+  className="floatFooterBar"
+>
+  <div
+    className="sc-AxhUy dxxPfe floatFooterBar"
+  />
+</styled.div>
+`;

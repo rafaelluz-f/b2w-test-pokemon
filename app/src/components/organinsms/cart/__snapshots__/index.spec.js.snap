@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductPrice /> should mount correctly Cart component 1`] = `
+<styled.div
+  className="cart"
+  id="cart"
+>
+  <div
+    className="sc-fzoLag nLUAQ cart"
+    id="cart"
+  >
+    <styled.div
+      className="cartTitle"
+    >
+      <div
+        className="sc-AxirZ fUMLcy cartTitle"
+      >
+        <styled.span
+          className="cartText"
+        >
+          <span
+            className="sc-AxjAm eKjPIR cartText"
+          >
+            Carrinho
+          </span>
+        </styled.span>
+      </div>
+    </styled.div>
+    <styled.div
+      className="cartItemList"
+    >
+      <div
+        className="sc-fznZeY irhoaQ cartItemList"
+      >
+        <p />
+      </div>
+    </styled.div>
+    <styled.div
+      className="cartFields"
+    >
+      <div
+        className="sc-fzoyAV lgNqAT cartFields"
+      >
+        <p>
+          <styled.label
+            className="cartFieldLabel"
+          >
+            <label
+              className="sc-fzokOt kdekdC cartFieldLabel"
+            >
+              Adicione o número do seu Cartão:
+            </label>
+          </styled.label>
+          <styled.input
+            className="cardFieldInput"
+            onChange={[Function]}
+            type="text"
+            value=""
+          >
+            <input
+              className="sc-fzqBZW khKONs cardFieldInput"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </styled.input>
+        </p>
+        <p>
+          <styled.input
+            checked={0}
+            className="cardFieldCheckBox"
+            onChange={[Function]}
+            placeholder="Lembrar cartão"
+            type="checkbox"
+          >
+            <input
+              checked={0}
+              className="sc-fzqNJr dAhJRB cardFieldCheckBox"
+              onChange={[Function]}
+              placeholder="Lembrar cartão"
+              type="checkbox"
+            />
+          </styled.input>
+          <styled.label
+            className="cartFieldLabel"
+          >
+            <label
+              className="sc-fzokOt kdekdC cartFieldLabel"
+            >
+              Lembrar Cartão
+            </label>
+          </styled.label>
+        </p>
+      </div>
+    </styled.div>
+    <styled.div
+      className="cartTotal"
+    >
+      <div
+        className="sc-Axmtr gXXiHk cartTotal"
+      >
+        <styled.span
+          className="cartTotalText"
+        >
+          <span
+            className="sc-AxgMl gsTBGn cartTotalText"
+          >
+            Total:
+          </span>
+        </styled.span>
+        <styled.span
+          className="cartTotalPriceText"
+        >
+          <span
+            className="sc-AxheI izSSdO cartTotalPriceText"
+          >
+            R$
+            0,00
+          </span>
+        </styled.span>
+      </div>
+    </styled.div>
+    <styled.div
+      className="cartButton"
+      id="yourAnchorTag"
+    >
+      <div
+        className="sc-AxhUy kMyssT cartButton"
+        id="yourAnchorTag"
+      >
+        <styled.button
+          className="cartButtonDisabled"
+          onClick={[Function]}
+        >
+          <button
+            className="sc-AxiKw eSLaKn cartButtonDisabled"
+            onClick={[Function]}
+          >
+            Finalizar
+          </button>
+        </styled.button>
+      </div>
+    </styled.div>
+  </div>
+</styled.div>
+`;
